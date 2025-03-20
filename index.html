@@ -1,7 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<h1>Hello Joey</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="container">
+        <section class="intro">
+            <img src="joey.png" alt="Joey's profile picture" class="profile-image">
+            <h1>Hi, I'm Joey</h1>
+            <p>I <span class="highlight">design</span> and <span class="highlight">code</span> stuff, but my real talent is getting lost in new places. I also love hiking and bikepacking, but I don't fancy cold weather. As soon as winter is coming, you can call me Goose, because I'm probably headed south.
+            </p><br/>
+            <p>This is my <strong>story in a nutshell</strong></p>
+            <button class="scroll-down">scroll down <i class="fas fa-chevron-down"></i></button>
+        </section>
+
+        <section class="projects">
+            <article class="project-card">
+                <h2>Project One</h2>
+                <div class="tags">
+                    <span class="tag">UI Design</span>
+                    <span class="tag">React</span>
+                    <span class="tag">TypeScript</span>
+                </div>
+                <p>A brief description of your first project. Explain the challenge, your approach, and the outcome.</p>
+                <img src="project1-placeholder.jpg" alt="Project One Preview">
+            </article>
+
+            <article class="project-card">
+                <h2>Project Two</h2>
+                <div class="tags">
+                    <span class="tag">UX Research</span>
+                    <span class="tag">Figma</span>
+                    <span class="tag">Design Systems</span>
+                </div>
+                <p>Description of your second project showcasing your design and development skills.</p>
+                <img src="project2-placeholder.jpg" alt="Project Two Preview">
+            </article>
+
+            <article class="project-card">
+                <h2>Project Three</h2>
+                <div class="tags">
+                    <span class="tag">Web Development</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">MongoDB</span>
+                </div>
+                <p>Overview of your third project highlighting your full-stack development capabilities.</p>
+                <img src="project3-placeholder.jpg" alt="Project Three Preview">
+            </article>
+        </section>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
