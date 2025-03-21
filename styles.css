@@ -338,7 +338,7 @@ body {
 }
 
 [data-theme="dark"] .view-project {
-    background-color: #1b1b1b;
+    /* background-color: #1b1b1b; */
     color: #ffffff;
 }
 
