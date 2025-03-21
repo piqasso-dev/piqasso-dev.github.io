@@ -195,9 +195,9 @@ body {
 .scroll-down {
     margin-top: 2rem;
     padding: 0.8rem 1.5rem;
-    border: 2px solid rgba(43, 43, 43, 0.3);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
+    border: none;
+    background: transparent;
+    backdrop-filter: none;
     color: #333;
     border-radius: 25px;
     font-family: inherit;
@@ -233,8 +233,7 @@ body {
 }
 
 .scroll-down:hover {
-    background: rgba(255, 255, 255, 0.2);
-    /* animation-play-state: paused; */
+    background: transparent;
 }
 
 .scroll-down:active {

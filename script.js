@@ -1,6 +1,11 @@
-document.querySelector('.scroll-down').addEventListener('click', () => {
+// Add scroll functionality to both elements
+document.querySelector('.scroll-down').addEventListener('click', scrollToProjects);
+document.querySelector('.scroll-to-projects').addEventListener('click', scrollToProjects);
+
+// Function to scroll to projects section
+function scrollToProjects() {
     document.querySelector('.projects').scrollIntoView({ behavior: 'smooth' });
-});
+}
 
 // Theme switcher
 const themeToggle = document.getElementById('theme-toggle');
