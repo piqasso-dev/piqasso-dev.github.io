@@ -197,9 +197,9 @@ body {
 .scroll-down {
     margin-top: 2rem;
     padding: 0.6rem 1rem;
-    border: none;
-    background: transparent;
-    backdrop-filter: none;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
     color: #333;
     border-radius: 25px;
     font-family: inherit;
@@ -299,7 +299,7 @@ body {
 }
 
 .view-project {
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
     color: #444;
     /* border: 1px solid #e0e0e0; */
     margin-top: -20px;
