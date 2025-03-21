@@ -67,11 +67,12 @@ body {
 
 .project-card {
     width: 600px;
-    max-height: 500px;
+    height: 600px;
+    /* max-height: 500px; */
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 100vh;
+    margin-bottom: 10vh;
     padding: 2rem;
     position: relative;
     display: flex;
@@ -79,11 +80,11 @@ body {
 }
 
 .project-card:last-child {
-    margin-bottom: 0;
+    margin-bottom: 20vh;
 }
 
 .project-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
@@ -97,6 +98,7 @@ body {
     display: flex;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .tag {
@@ -126,7 +128,7 @@ body {
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    animation: bobbing 1s ease-in-out infinite;
+    animation: bobbing 1.5s ease-in-out infinite;
     align-self: flex-end;
     display: flex;
     align-items: center;
@@ -135,6 +137,14 @@ body {
 
 .scroll-down i {
     font-size: 0.9rem;
+    background-color: #000;
+    color: white;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
 }
 
 @keyframes bobbing {
@@ -168,4 +178,36 @@ body {
 .highlight:hover {
     background: linear-gradient(120deg, rgba(72, 219, 251, 0.3), rgba(29, 209, 161, 0.3));
     transform: translateY(-1px);
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.card-actions a {
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.view-project {
+    background-color: white;
+    color: #444;
+    border: 1px solid #e0e0e0;
+}
+
+.view-project:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+}
+
+.card-actions i {
+    font-size: 0.8rem;
 } 
