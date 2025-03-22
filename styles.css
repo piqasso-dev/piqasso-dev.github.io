@@ -436,7 +436,6 @@ body {
 .modal-content {
     position: relative;
     background-color: var(--card-bg);
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -529,4 +528,26 @@ body {
 [data-theme="dark"] .form-group textarea {
     background-color: var(--bg-color);
     color: var(--text-color);
+}
+
+.form-message {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form-message.success {
+    background-color: rgba(29, 209, 161, 0.1);
+    color: #1dd1a1;
+    opacity: 1;
+}
+
+.form-message.error {
+    background-color: rgba(255, 71, 87, 0.1);
+    color: #ff4757;
+    opacity: 1;
 } 

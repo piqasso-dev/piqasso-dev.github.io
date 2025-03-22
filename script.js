@@ -47,20 +47,26 @@ const ctaButton = document.querySelector('.cta-button');
 const closeModal = document.querySelector('.close-modal');
 const contactForm = document.getElementById('contactForm');
 
+console.log('Modal elements:', { modal, ctaButton, closeModal, contactForm });
+
 // Open modal when clicking CTA button
 ctaButton.addEventListener('click', (e) => {
     e.preventDefault();
+    console.log('CTA button clicked');
     modal.style.display = 'block';
+    console.log('Modal display set to block');
 });
 
 // Close modal when clicking the close button
 closeModal.addEventListener('click', () => {
+    console.log('Close button clicked');
     modal.style.display = 'none';
 });
 
 // Close modal when clicking outside
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
+        console.log('Outside modal clicked');
         modal.style.display = 'none';
     }
 });
@@ -80,18 +86,28 @@ contactForm.addEventListener('submit', (e) => {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
 
+    // Clear any previous messages
+    const formMessage = document.getElementById('formMessage');
+    formMessage.textContent = '';
+    formMessage.className = 'form-message';
+
     // Send email using EmailJS
     emailjs.sendForm('service_vq72a92', 'template_ce5zqij', contactForm)
         .then(
             () => {
                 // Show success message
-                alert('Message sent successfully!');
+                formMessage.textContent = 'Message sent successfully!';
+                formMessage.className = 'form-message success';
                 contactForm.reset();
-                modal.style.display = 'none';
+                // Close modal after 2 seconds
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 2000);
             },
             (error) => {
                 // Show error message
-                alert('Failed to send message. Please try again later.');
+                formMessage.textContent = 'Failed to send message. Please try again later.';
+                formMessage.className = 'form-message error';
                 console.error('EmailJS error:', error);
             }
         )
