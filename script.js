@@ -43,18 +43,20 @@ themeToggle.addEventListener('change', toggleTheme);
 
 // Modal functionality
 const modal = document.getElementById('contactModal');
-const ctaButton = document.querySelector('.cta-button');
+const ctaButtons = document.querySelectorAll('.cta-button');
 const closeModal = document.querySelector('.close-modal');
 const contactForm = document.getElementById('contactForm');
 
-console.log('Modal elements:', { modal, ctaButton, closeModal, contactForm });
+// console.log('Modal elements:', { modal, ctaButtons, closeModal, contactForm });
 
-// Open modal when clicking CTA button
-ctaButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    console.log('CTA button clicked');
-    modal.style.display = 'block';
-    console.log('Modal display set to block');
+// Open modal when clicking any CTA button
+ctaButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('CTA button clicked');
+        modal.style.display = 'block';
+        console.log('Modal display set to block');
+    });
 });
 
 // Close modal when clicking the close button

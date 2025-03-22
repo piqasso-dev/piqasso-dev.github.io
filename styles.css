@@ -189,7 +189,7 @@ body {
 
 .project-card img {
     width: 100%;
-    max-height: 250px;
+    max-height: 240px;
     object-fit: cover;
     /* border-radius: 8px; */
 }
@@ -355,7 +355,15 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 4rem 0;
+    margin: 2rem 0;
+}
+
+.cta-container.cta-left {
+    /* justify-content: flex-start; */
+}
+
+.cta-container.cta-right {
+    justify-content: flex-end;
 }
 
 .cta-button {
