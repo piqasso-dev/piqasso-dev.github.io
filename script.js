@@ -39,4 +39,65 @@ if (currentTheme) {
 }
 
 // Add event listener for theme toggle
-themeToggle.addEventListener('change', toggleTheme); 
+themeToggle.addEventListener('change', toggleTheme);
+
+// Modal functionality
+const modal = document.getElementById('contactModal');
+const ctaButton = document.querySelector('.cta-button');
+const closeModal = document.querySelector('.close-modal');
+const contactForm = document.getElementById('contactForm');
+
+// Open modal when clicking CTA button
+ctaButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'block';
+});
+
+// Close modal when clicking the close button
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// Initialize EmailJS
+(function() {
+    emailjs.init("7EDGJfuIalW3-t5Vx"); // Add your EmailJS public key here
+})();
+
+// Handle form submission
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Show loading state
+    const submitBtn = contactForm.querySelector('.submit-btn');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    // Send email using EmailJS
+    emailjs.sendForm('service_vq72a92', 'template_ce5zqij', contactForm)
+        .then(
+            () => {
+                // Show success message
+                alert('Message sent successfully!');
+                contactForm.reset();
+                modal.style.display = 'none';
+            },
+            (error) => {
+                // Show error message
+                alert('Failed to send message. Please try again later.');
+                console.error('EmailJS error:', error);
+            }
+        )
+        .finally(() => {
+            // Reset button state
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+        });
+}); 
