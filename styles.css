@@ -144,7 +144,7 @@ body {
     background: var(--card-bg);
     /* border-radius: 12px; */
     box-shadow: 0 4px 6px var(--shadow);
-    margin-bottom: 10vh;
+    margin-bottom: 2vh;
     padding: 1rem;
     position: relative;
     display: flex;
@@ -349,6 +349,47 @@ body {
 [data-theme="dark"] .tag {
     background: #1b1b1b;
     color: #ffffff;
+}
+
+.cta-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.cta-button {
+    background: linear-gradient(120deg, rgba(233, 251, 72, 0.2), rgba(29, 209, 161, 0.2));
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px var(--shadow);
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+.cta-button i {
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover i {
+    transform: translateX(4px);
+}
+
+[data-theme="dark"] .cta-button {
+    background: linear-gradient(120deg, rgba(233, 251, 72, 0.1), rgba(29, 209, 161, 0.1));
 }
 
 @media screen and (max-width: 768px) {
