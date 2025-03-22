@@ -1,6 +1,9 @@
 // Add scroll functionality to both elements
 document.querySelector('.scroll-down').addEventListener('click', scrollToProjects);
-document.querySelector('.scroll-to-projects').addEventListener('click', scrollToProjects);
+const scrollToProjectsElement = document.querySelector('.scroll-to-projects');
+if (scrollToProjectsElement) {
+    scrollToProjectsElement.addEventListener('click', scrollToProjects);
+}
 
 // Function to scroll to projects section
 function scrollToProjects() {
