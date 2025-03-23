@@ -299,7 +299,7 @@ body {
 }
 
 .view-project {
-    /* background-color: #f8f8f8; */
+    background-color: #f8f8f8;
     color: #444;
     /* border: 1px solid #e0e0e0; */
     margin-top: -20px;
@@ -338,7 +338,7 @@ body {
 }
 
 [data-theme="dark"] .view-project {
-    /* background-color: #1b1b1b; */
+    background-color: #1b1b1b;
     color: #ffffff;
 }
 
