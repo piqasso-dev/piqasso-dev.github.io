@@ -359,7 +359,7 @@ body {
 }
 
 .cta-container.cta-left {
-    /* justify-content: flex-start; */
+    justify-content: flex-start;
 }
 
 .cta-container.cta-right {
