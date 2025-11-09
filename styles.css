@@ -126,7 +126,7 @@ body {
 .intro p {
     font-size: 1.2rem;
     color: var(--card-text);
-    max-width: 600px;
+    max-width: 490px;
     text-align: left;
 }
 
